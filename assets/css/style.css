@@ -272,7 +272,7 @@ img {
 }
 
 .home__scroll {
-    /* display: none; */
+    display: none;
 }
 
 .home__scroll-button {
@@ -325,3 +325,37 @@ img {
     align-items: center;
 }
 
+/* ++++++++ ABOUT ++++++++ */
+.about__img {
+    width: 200px;
+    border-radius: .5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.about__description {
+    text-align: center;
+    margin-block-end: var(--mb-2-5);
+}
+
+.about__info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about__info-title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.about__info-name {
+    font-size: var(--small-font-size);
+}
+
+.about__info-name,
+.about__info-title {
+    display: block;
+    text-align: center;
+}
