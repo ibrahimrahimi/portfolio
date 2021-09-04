@@ -1,2 +1,2 @@
 # portfolio
-This is simple design for a portfolio website.
+This is a simple design for a portfolio website.
