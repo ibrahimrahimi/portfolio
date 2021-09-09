@@ -525,3 +525,27 @@ img {
     font-size: var(--smaller-font-size);
     color: var(--text-color-light);
 }
+
+.qualification__rounder {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--first-color);
+}
+
+.qualification__line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color:var(--first-color);
+    transform: translateY(6px, -7px);
+}
+
+.qualification [data-content] {
+    display: none;
+}
+
+.qualification__active[data-content] {
+    display: block;
+}
