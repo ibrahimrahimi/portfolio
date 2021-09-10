@@ -521,7 +521,7 @@ img {
     margin-bottom: var(--mb-1);
 }
 
-.qualification__clender {
+.qualification__calender {
     font-size: var(--smaller-font-size);
     color: var(--text-color-light);
 }
@@ -530,8 +530,8 @@ img {
     display: inline-block;
     width: 13px;
     height: 13px;
-    border-radius: 50%;
     background-color: var(--first-color);
+    border-radius: 50%;
 }
 
 .qualification__line {
@@ -539,7 +539,7 @@ img {
     width: 1px;
     height: 100%;
     background-color:var(--first-color);
-    transform: translateY(6px, -7px);
+    transform: translate(6px, -7px);
 }
 
 .qualification [data-content] {
@@ -548,4 +548,8 @@ img {
 
 .qualification__active[data-content] {
     display: block;
+}
+
+.qualification__button.qualification__active {
+    color: var(--first-color);
 }
