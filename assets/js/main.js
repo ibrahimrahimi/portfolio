@@ -65,3 +65,28 @@ tabs.forEach(tab => {
         tab.classList.add('qualification__active');
     });
 });
+
+/* ++++++++ SERVICES MODAL ++++++++ */
+const modalViews = document.querySelectorAll('.services__modal'),
+    modalButtons = document.querySelectorAll('.services__button'),
+    modalCloses = document.querySelectorAll('.services__modal-close');
+
+let modal = function(modalClick) {
+    modalViews[modalClick].classList.add('active-modol');
+};
+
+modalButtons.forEach((modalButton, i) => {
+    modalButton.addEventListener('click', () => {
+        modal(i);
+    });
+});
+
+let activeModal = function(modalClose) {
+    modalViews[modalClose].classList.remove('active-modol');
+};
+
+modalCloses.forEach((modalClose, i) => {
+    modalClose.addEventListener('click', () => {
+        activeModal(i);
+    });
+});
