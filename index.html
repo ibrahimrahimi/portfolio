@@ -555,7 +555,7 @@
                 <h2 class="section__title">Portfolio</h2>
                 <span class="section__subtitle">Most Recent Work</span>
 
-                <div class="portfolio__container container swiper-container">
+                <div class="portfolio__container container swiper">
                     <div class="swiper-wrapper">
                         <!--++++++++ PORTFOLIO 1 ++++++++-->
                         <div class="portfolio__content grid swiper-slide">
@@ -599,9 +599,16 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+
+                    <!-- Pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
             </section> 
