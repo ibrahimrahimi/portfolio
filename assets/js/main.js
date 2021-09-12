@@ -169,3 +169,33 @@ function scrollUp() {
 };
 
 window.addEventListener('scroll', scrollUp);
+
+/* ++++++++ SHOW SCROLL UP ++++++++ */
+const themeButton = document.getElementById('theme-button');
+const darkTheme = 'dark-theme';
+const iconTheme = 'uil-sun';
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+// We obtain the current theme that the interface has by validating the dark-them class.
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moonset' : 'uil-sun';
+
+// we validate if the user previously choose a tipic.
+if(selectedTheme) {
+    // We validate is fulfilled, we ask what the issue was to know if we activated
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeButton.classList[selectedIcon === 'uil-moonset' ? 'add' : 'remove'] (iconTheme);
+};
+
+// Activate / deactivate the theme manully with the button 
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme);
+    themeButton.classList.toggle(iconTheme);
+    // We save the theme and teh current icon that the user choose
+    localStorage.setItem('selected-theme', getCurrentTheme());
+    localStorage.setItem('selected-icon', getCurrentIcon());
+});
