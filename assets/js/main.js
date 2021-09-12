@@ -6,9 +6,16 @@ const navMenu = document.getElementById('nav-menu'),
 /* +++++++ SHOW MENU +++++++++ */
 /* Validate if contant exists */
 if(navToggle) {
-    console.log('close button clicked!!!');
     navToggle.addEventListener('click', () => {
-        navMenu.classList.add('nav__show');
+        navMenu.classList.add('menu__show');
+    });
+};
+
+/* +++++++ HIDE MENU +++++++++ */
+/* Validate if contant exists */
+if(navClose) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('menu__show');
     });
 };
 
@@ -17,12 +24,10 @@ const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
     const navMenu = document.getElementById('nav-menu');
-    console.log('nav-menu is here!');
     // When we click on each nav__link, we remove the show-menu class.
-    navMenu.classList.remove('nav__show');
+    navMenu.classList.remove('menu__show');
 };
 
-console.log(navLink);
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /* ++++++++ ACCORDION SKILLS ++++++++ */
@@ -32,7 +37,6 @@ const skillsContent = document.getElementsByClassName('skills__content'),
 function toggleSkills() {
     let itemClass = this.parentNode.className;
 
-    console.log(itemClass);
     for(i = 0; i < skillsContent.length; i++) {
         skillsContent[i].className = 'skills__content skills__close';
     };
@@ -131,9 +135,8 @@ function scrollActive() {
     sections.forEach(currentSection => {
         const sectionHeight = currentSection.offsetHeight;
         const sectionTop = currentSection.offsetTop - 50;
-        sectionId = currentSection.getAttribute('id');
+        const sectionId = currentSection.getAttribute('id');
 
-        console.log('section id is ============>', sectionId);
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
         } else {
