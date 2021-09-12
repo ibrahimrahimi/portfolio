@@ -138,8 +138,21 @@ function scrollActive() {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
         } else {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
-        }
-    })
-}
+        };
+    });
+};
 
 window.addEventListener('scroll', scrollActive);
+
+/* ++++++++ CHANGE BACKGROUND HEADER ++++++++ */
+function scrollHeader() {
+    const nav = document.getElementById('header');
+    // When the scoll is greater than 200 viewport height, and tehs scroll-header class is the header tag
+    if(this.scrollY >= 80){
+        nav.classList.add('scroll-header');
+    } else {
+        nav.classList.remove('scroll-header');
+    };
+};
+
+window.addEventListener('scroll', scrollHeader);
