@@ -217,6 +217,11 @@ img {
     bottom: 0;
 }
 
+/* ++++++++ ACTIVE LINK +++++++ */
+.active-link {
+    color: var(--first-color);
+}
+
 /* ++++++++ HOME ++++++++ */
 .home__container {
     gap: 1rem;

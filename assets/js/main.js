@@ -121,3 +121,25 @@ var swiperTestimonial = new Swiper(".testimonial__container", {
         }
     }
   });
+
+/* ++++++++ SCROLL SECTIONS ACTIVE LINK ++++++++ */
+const sections = document.querySelectorAll('section[id');
+
+function scrollActive() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(currentSection => {
+        const sectionHeight = currentSection.offsetHeight;
+        const sectionTop = currentSection.offsetTop - 50;
+        sectionId = currentSection.getAttribute('id');
+
+        console.log('section id is ============>', sectionId);
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
+        } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
+        }
+    })
+}
+
+window.addEventListener('scroll', scrollActive);
