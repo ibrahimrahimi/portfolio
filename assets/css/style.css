@@ -9,7 +9,7 @@
     /*++++++++ COLORS ++++++++*/
     /* Change favorite colors */
 
-    --hue-color: 230; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 340; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -1077,17 +1077,33 @@ body.dark-theme {
         justify-self: center;
     }
 
+    .about__img {
+        width: 320px;
+    }
+
     .about__container,
     .skills__container,
-    .portfolio__container,
+    .portfolio__content,
     .project__container,
     .contact__container,
     .footer__container {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .home__blob {
+        width: 260px;
+    }
+
+    .portfolio__img {
+        margin-top: .5rem;
+    }
+
     .project__img {
         margin-top: -2rem;
+    }
+
+    .project__bg {
+        padding: 1.5rem 1rem 0 1rem;
     }
 
     .qualification__sections {
