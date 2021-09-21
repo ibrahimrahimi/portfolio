@@ -38,7 +38,7 @@
     --smaller-font-size: .57rem;
 
     /*++++++++ FONT WEIGHT ++++++++*/
-    --font-medium: 500;
+    --font-medium: 400;
     --font-semi-bold: 600;
  
     /*++++++++ MARGENES BOTTOM ++++++++*/
@@ -274,6 +274,7 @@ img {
 }
 
 .home__title {
+    margin-bottom: var(--mb-0-5);
     font-size: var(--h1-font-size);
 }
 
@@ -559,7 +560,7 @@ img {
 .qualification__subtitle {
     display: inline-block;
     font-size: var(--small-font-size);
-    margin-bottom: var(--mb-1);
+    margin-bottom: var(--mb-0-5);
 }
 
 .qualification__calender {
@@ -854,7 +855,7 @@ img {
 }
 
 .contact__title {
-    font-size: var(--h3-font-size);
+    font-size:var(--normal-font-size);
     font-weight: var(--font-medium);
 }
 
@@ -904,7 +905,7 @@ img {
 }
 
 .footer__title {
-    font-size: var(--h1-font-size);
+    font-size: var(--h2-font-size);
     margin-bottom: var(--mb-0-25);
 }
 
@@ -926,12 +927,16 @@ img {
     row-gap: 1.5rem;
 }
 
+.footer__link {
+    font-size: var(--small-font-size);
+}
+
 .footer__link:hover {
     color: var(--first-color-lighter);
 }
 
 .footer__social {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-right: var(--mb-1-5);
 }
 
@@ -1092,6 +1097,10 @@ body.dark-theme {
     .testimonial__description {
         text-align: center;
     }
+
+    .footer__link {
+        font-size: var(--small-font-size);
+    }    
 }
 
 /* For Medium Devices */
@@ -1161,7 +1170,7 @@ body.dark-theme {
     }
 
     .section__subtitle {
-        margin-bottom: 4rem;
+        margin-bottom: 3.5rem;
     }
 
     .header {
@@ -1209,11 +1218,11 @@ body.dark-theme {
     }
 
     .home__container {
-        row-gap: 5rem;
+        row-gap: 4rem;
     }
     
     .home__content {
-        padding-top: 5.5rem;
+        padding-top: 5rem;
         column-gap: 2rem;
     }
 
@@ -1314,9 +1323,25 @@ body.dark-theme {
         padding: 3rem 0 3.rem;
     }
 
+    .footer__title {
+        font-size: var(--h1-font-size);
+    }
+
+    .footer__subtitle {
+        font-size: var(--normal-font-size);
+    }
+
     .footer__links {
         flex-direction: row;
         column-gap: 2rem;
+    }
+    
+    .footer__link {
+        font-size: var(--normal-font-size);
+    }    
+    
+    .footer__social {
+        font-size: 1.25rem;
     }
 
     .footer__socials {
@@ -1375,4 +1400,7 @@ body.dark-theme {
     .contact__inputs {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+
+    .footer__social {
+        font-size: 1.5rem;
+    }
