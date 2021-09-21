@@ -165,6 +165,11 @@ img {
     color: var(--first-color);
 }
 
+.logo__nick-name {
+    color: var(--title-color);
+    font-size: var(--smaller-font-size);
+}
+
 @media screen and (max-width: 767px) {
     .nav__menu {
         position: fixed;
@@ -894,9 +899,21 @@ img {
     padding: 2rem 0  3rem;
 }
 
+.footer__logo {
+    display: flex;
+}
+
 .footer__title {
     font-size: var(--h1-font-size);
     margin-bottom: var(--mb-0-25);
+}
+
+.footer__title-nickname {
+    padding-top: var(--mb-0-75);
+    padding-left: var(--mb-0-25);
+    color: #FFF;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
 }
 
 .footer__subtitle {
